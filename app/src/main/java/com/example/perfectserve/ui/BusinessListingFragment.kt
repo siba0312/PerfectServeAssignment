@@ -18,8 +18,7 @@ class BusinessListingFragment: Fragment() {
     private lateinit var businessListingAdapter: BusinessListingAdapter
     private lateinit var recyclerView: RecyclerView
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
