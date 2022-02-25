@@ -35,8 +35,12 @@ class LandingFragment: Fragment() {
         val root: View = binding.root
         val navController = findNavController()
         binding.searchButton.setOnClickListener {
-            binding.progressBar.visibility = View.VISIBLE
-            landingScreenViewModel.getBusinessListFromNetwork(binding.enterLocationTv.text.toString(), requireContext())
+            if (binding.enterLocationTv.text.isNotEmpty()) {
+                binding.progressBar.visibility = View.VISIBLE
+                landingScreenViewModel.getBusinessListFromNetwork(binding.enterLocationTv.text.toString(), requireContext())
+            } else {
+                Toast.makeText(activity, getString(R.string.black_search_term), Toast.LENGTH_LONG).show()
+            }
         }
 
         landingScreenViewModel.businessDetailMutableLiveData?.observe(viewLifecycleOwner, {
