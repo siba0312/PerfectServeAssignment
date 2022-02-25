@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/business_navigation"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.example.perfectserve.ui.LandingFragment"
+        android:label="LandingFragment" >
+
+        <argument
+            android:name="businessDetail"
+            app:argType="com.example.perfectserve.model.BusinessDetail"/>
+
+        <action
+            android:id="@+id/action_landingFragment_to_businessListingFragment"
+            app:destination="@id/businessListingFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/landingFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/businessListingFragment"
+        android:name="com.example.perfectserve.ui.BusinessListingFragment"
+        android:label="BusinessListingFragment">
+
+        <argument
+            android:name="businessDetail"
+            app:argType="com.example.perfectserve.model.BusinessDetail"/>
+    </fragment>
+</navigation>

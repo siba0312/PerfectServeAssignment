@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PerfectServe</string>
+    <string name="something_went_wrong">Could not execute search, try specifying a more exact location or term.</string>
+    <string name="rating_title">Rating</string>
+</resources>

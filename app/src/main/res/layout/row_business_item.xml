@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/business_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageView
+            android:id="@+id/businessThumbnailIv"
+            android:layout_width="@dimen/businessitem_image_width"
+            android:layout_height="@dimen/businessitem_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:background="@drawable/image_boder"
+            tools:background="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/businessNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            app:layout_constrainedWidth="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/businessitem_title_textsize"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/businessThumbnailIv"
+            app:layout_constraintStart_toEndOf="@+id/businessThumbnailIv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hello World" />
+
+    <TextView
+        android:id="@+id/phoneNumberTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/businessThumbnailIv"
+        app:layout_constraintTop_toBottomOf="@+id/businessNameTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"/>
+
+    <TextView
+        android:id="@+id/ratingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/businessThumbnailIv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dimen_4dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:text="@string/rating_title"/>
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            app:layout_constraintLeft_toRightOf="@+id/ratingTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dimen_8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
