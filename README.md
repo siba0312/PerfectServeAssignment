@@ -9,4 +9,4 @@ Intraction between fragments are done by NavigationGraph.
 
 For Network call Volley is being used.
 
-FFor Image caching Picaso is being used.
+For Image caching Picaso is being used.
